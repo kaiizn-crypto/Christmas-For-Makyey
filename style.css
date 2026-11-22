@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1f4e3d 0%, #0f291e 100%);
+  color: #fdf8f0;
+  font-family: 'Lora', Georgia, serif;
+  padding: 24px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Full-screen Snowflakes */
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -20px;
+  color: #ffffff;
+  user-select: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-20px) translateX(0);
+  }
+  50% {
+    transform: translateY(50vh) translateX(15px);
+  }
+  100% {
+    transform: translateY(105vh) translateX(-10px);
+  }
+}
+
+/* Side-by-Side Main Container */
+.card-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  max-width: 1040px;
+  width: 100%;
+  background: rgba(255, 252, 245, 0.97);
+  color: #2c241e;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  border: 3px solid #d4af37;
+  overflow: hidden;
+}
+
+/* Left Panel */
+.message-panel {
+  flex: 1.45;
+  padding: 42px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.82rem;
+  color: #9e2a2b;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.message-panel h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.1rem;
+  color: #1b4332;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.message-panel p {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 14px;
+  color: #3d352e;
+}
+
+.signature {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-style: italic;
+  color: #9e2a2b;
+}
+
+/* Right Panel */
+.countdown-panel {
+  flex: 0.95;
+  background: linear-gradient(145deg, #8b1e24 0%, #641216 100%);
+  color: #fdf8f0;
+  padding: 42px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.countdown-panel h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.7rem;
+  margin-bottom: 28px;
+  color: #f8e5b0;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(248, 229, 176, 0.35);
+  border-radius: 12px;
+  padding: 18px 10px;
+  backdrop-filter: blur(4px);
+}
+
+.time-box span {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.time-box small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f8e5b0;
+}
+
+.status-text {
+  margin-top: 26px;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #f3d9dc;
+}
+
+/* Responsive adjustment for phones */
+@media (max-width: 820px) {
+  .card-container {
+    flex-direction: column;
+  }
+  .message-panel,
+  .countdown-panel {
+    padding: 32px 24px;
+  }
+}

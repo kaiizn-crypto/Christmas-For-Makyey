@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merry Christmas, Grandma!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Full-screen falling snow container -->
+  <div id="snow-container" aria-hidden="true"></div>
+
+  <main class="card-container">
+    <!-- Left Side: Full Christmas Letter -->
+    <section class="message-panel">
+      <span class="subtitle">Christmas's Letter For Makyey</span>
+      <h1>Dear Grandma,</h1>
+      <p>
+        Merry Christmas! As the holidays roll around and the countdown to Christmas Day ticks closer, I wanted to take a moment to send you a little extra holiday cheer.
+      </p>
+      <p>
+        Being part of this family and getting to spend time with someone as kind, warm, and welcoming as you means so much to me. You have a way of making everyone feel right at home, whether it is through your warmth, your stories, or simply the care you put into everything you do.
+      </p>
+      <p>
+        My wish for you this Christmas is simple: quiet, cozy moments, good health, plenty of laughter, and the feeling of being deeply loved. You have given so much joy to your family over the years, and I hope you get to soak up a whole lot of it right back this season.
+      </p>
+      <p>
+        Thank you for welcoming me in and making the holidays feel even more special. Wishing you a very Merry Christmas and a bright, peaceful New Year ahead.
+      </p>
+      <p class="signature">With warmest wishes and holiday cheer,<br><strong>[Leap and Pania]</strong></p>
+    </section>
+
+    <!-- Right Side: Christmas Countdown -->
+    <section class="countdown-panel">
+      <h2>Countdown to Christmas</h2>
+      <div class="countdown-grid">
+        <div class="time-box">
+          <span id="days">00</span>
+          <small>Days</small>
+        </div>
+        <div class="time-box">
+          <span id="hours">00</span>
+          <small>Hours</small>
+        </div>
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <small>Minutes</small>
+        </div>
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <small>Seconds</small>
+        </div>
+      </div>
+      <p id="christmas-status" class="status-text">Counting down the moments until Christmas Day!</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
